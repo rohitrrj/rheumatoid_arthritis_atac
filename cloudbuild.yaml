@@ -3,9 +3,10 @@
 
 steps:
 - name: 'gcr.io/kaniko-project/executor:latest'
-  args: ["--dockerfile='./Dockerfile'",
-         "--context=https://github.com/rohitrrj/rheumatoid_arthritis_atac.git#refs/heads/master#$COMMIT_SHA",
-         "--destination='gcr.io/$PROJECT_ID/rheumatoid-arthritis-atac:$COMMIT_SHA']
+  args:
+  - --destination='gcr.io/$PROJECT_ID/rheumatoid-arthritis-atac:$COMMIT_SHA'
+  - --cache=true
+  - --cache-ttl=720h
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args:
