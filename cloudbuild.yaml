@@ -2,7 +2,7 @@
 # This file is used by the Cloud Build trigger that builds this image.
 
 steps:
-- name: 'gcr.io/kaniko-project/executor:latest'
+- name: 'gcr.io/kaniko-project/executor:v0.20.0'
   args:
   - --destination='gcr.io/$PROJECT_ID/rheumatoid-arthritis-atac:$COMMIT_SHA'
   - --cache=true
