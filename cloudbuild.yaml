@@ -2,13 +2,11 @@
 # This file is used by the Cloud Build trigger that builds this image.
 
 steps:
-- name: 'gcr.io/kaniko-project/executor:v0.20.0'
+- name: 'gcr.io/kaniko-project/executor:latest'
   args:
-  - --destination='gcr.io/$PROJECT_ID/rheumatoid-arthritis-atac:$COMMIT_SHA'
+  - --destination='gcr.io/$PROJECT_ID/rheumatoid_arthritis_atac:$COMMIT_SHA'
   - --cache=true
   - --cache-ttl=720h
-  env:
-  - "DOCKER_CONFIG=/kaniko/.docker-test"
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args:
@@ -17,14 +15,14 @@ steps:
         'deploy',
         'rheumatoid-arthritis-atac',
         '--image',
-        'gcr.io/$PROJECT_ID/rheumatoid-arthritis-atac:$COMMIT_SHA',
+        'gcr.io/$PROJECT_ID/rheumatoid_arthritis_atac:$COMMIT_SHA',
         '--region',
         'us-west1',
         '--platform',
         'managed',
         '--quiet',
       ]
-images: ['gcr.io/$PROJECT_ID/rheumatoid-arthritis-atac:$COMMIT_SHA']
+images: ['gcr.io/$PROJECT_ID/rheumatoid_arthritis_atac:$COMMIT_SHA']
 timeout: '3600s'
 options:
   machineType: 'N1_HIGHCPU_8'
