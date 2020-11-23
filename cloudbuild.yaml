@@ -22,7 +22,3 @@ steps:
         'managed',
         '--quiet',
       ]
-images: ['gcr.io/$PROJECT_ID/rheumatoid-arthritis-atac:$COMMIT_SHA']
-timeout: '3600s'
-options:
-  machineType: 'N1_HIGHCPU_8'
