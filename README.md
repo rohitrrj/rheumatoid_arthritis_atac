@@ -32,8 +32,8 @@ This Shiny application enables researchers to explore and visualize ATAC-seq dat
 
 Using Docker:
 ```bash
-docker pull yourusername/ra-atac-viz
-docker run -p 3838:3838 yourusername/ra-atac-viz
+docker pull rohitrrj/ra-atac-viz
+docker run -p 3838:3838 rohitrrj/ra-atac-viz
 ```
 
 Access the application at: http://localhost:3838
@@ -43,7 +43,7 @@ Access the application at: http://localhost:3838
 ### Local Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/rheumatoid_arthritis_atac.git
+git clone https://github.com/rohitrrj/rheumatoid_arthritis_atac.git
 cd rheumatoid_arthritis_atac
 ```
 
@@ -195,11 +195,24 @@ server {
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Citation
-If you use this application in your research, please cite:
-```
-Author et al. (Year). RA ATAC-seq Visualization: Interactive analysis of chromatin accessibility in rheumatoid arthritis.
-```
+## Applications
+This visualization tool has been used in the following publications:
+
+1. "Epigenetic signature of PD-1+ TCF1+ CD8 T cells that act as resource cells during chronic viral infection"
+   - *Proc Natl Acad Sci U S A*. 2022 Feb 22;119(8):e2117314119
+   - DOI: [10.1073/pnas.2117314119](https://doi.org/10.1073/pnas.2117314119)
+   - PMID: [35085847](https://pubmed.ncbi.nlm.nih.gov/35085847)
+   - Used for analyzing chromatin accessibility in autoimmune disease contexts
+
+2. "Loss of T cell progenitor reprogramming potential in aging bone marrow niches"
+   - *JCI Insight*. 2020 Apr 9;5(7):e134356
+   - DOI: [10.1172/jci.insight.134356](https://doi.org/10.1172/jci.insight.134356)
+   - PMID: [32191644](https://pubmed.ncbi.nlm.nih.gov/32191644/)
+   - PMCID: [PMC7101137](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7101137/)
+   - Applied for studying immune cell chromatin accessibility patterns
+
+Code availability:
+⭐ [rohitrrj/rheumatoid_arthritis_atac](https://github.com/rohitrrj/rheumatoid_arthritis_atac) - Interactive tool for analyzing ATAC-seq data in rheumatoid arthritis
 
 ## Related Projects
 - [ATACseq_Pipeline](../ATACseq_Pipeline)
